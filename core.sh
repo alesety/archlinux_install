@@ -46,6 +46,6 @@ cat >> /etc/pacman.conf <<'EOT'
 SigLevel = Never
 Server = http://repo.archlinux.fr/$arch
 EOT
-pacman -Syu yaourt
+pacman -Syu --noconfirm yaourt
 EOF
 echo "---finish---"
