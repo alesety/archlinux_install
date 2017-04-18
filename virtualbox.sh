@@ -1,2 +1,2 @@
-pacman -Syu --noconfirm virtualbox-guest-utils
+pacman -Syu --noconfirm virtualbox-guest-modules-arch virtualbox-guest-utils
 modprobe -a vboxguest vboxsf vboxvideo
