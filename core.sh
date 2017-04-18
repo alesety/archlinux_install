@@ -41,5 +41,11 @@ mkdir -p /boot/EFI/boot
 cp /boot/EFI/grub/grubx64.efi /boot/EFI/boot/bootx64.efi
 systemctl start dhcpcd.service
 systemctl enable dhcpcd.service
+cat >> /etc/pacman.conf <<'EOT'
+[archlinuxfr]
+SigLevel = Never
+Server = http://repo.archlinux.fr/$arch
+EOT
+pacman -Syu yaourt
 EOF
 echo "---finish---"
