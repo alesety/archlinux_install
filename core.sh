@@ -39,5 +39,7 @@ sed -i "s/^#GRUB_HIDDEN_TIMEOUT=5$/GRUB_HIDDEN_TIMEOUT=0/" /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 mkdir -p /boot/EFI/boot
 cp /boot/EFI/grub/grubx64.efi /boot/EFI/boot/bootx64.efi
+systemctl start dhcpcd.service
+systemctl enable dhcpcd.service
 EOF
 echo "---finish---"
