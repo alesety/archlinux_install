@@ -1,4 +1,4 @@
-yaourt -S \
+yaourt -S --noconfirm \
 zsh zsh-completions neovim git \
 xorg-server xorg-server-utils xorg-xinit \
 xmonad xmonad-contrib xmobar dmenu gmrun termite \
