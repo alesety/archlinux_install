@@ -22,7 +22,7 @@ mount /dev/sda1 /mnt/boot
 timedatectl set-ntp true
 curl "https://www.archlinux.org/mirrorlist/?country=JP&protocol=http&protocol=https&ip_version=4&use_mirror_status=on" | \
 sed "s/^#Server/Server/" > /etc/pacman.d/mirrorlist
-pacstrap /mnt base base-devel grub efibootmgr
+pacstrap /mnt base base-devel grub efibootmgr zsh
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt <<'EOF'
 ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
