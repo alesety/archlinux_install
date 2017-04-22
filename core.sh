@@ -24,7 +24,7 @@ curl "https://www.archlinux.org/mirrorlist/?country=JP&protocol=http&protocol=ht
 sed "s/^#Server/Server/" > /etc/pacman.d/mirrorlist
 pacstrap /mnt base base-devel grub efibootmgr
 genfstab -U /mnt >> /mnt/etc/fstab
-arch-chroot /mnt <<EOF
+arch-chroot /mnt <<'EOF'
 ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 lwclock --systohc --utc
 sed -i "s/#ja_JP.UTF-8/ja_JP.UTF-8/" /etc/locale.gen
