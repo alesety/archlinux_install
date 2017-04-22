@@ -47,5 +47,7 @@ SigLevel = Never
 Server = http://repo.archlinux.fr/$arch
 EOT
 pacman -Syu --noconfirm yaourt
+find /etc/skel/ -type f | xargs rm
+touch /etc/skel/.zshrc
 EOF
 echo "---finish---"
